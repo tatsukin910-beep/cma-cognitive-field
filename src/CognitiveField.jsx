@@ -161,7 +161,7 @@ export default function CognitiveField() {
     // マクロな連続体に変換する主要な錫視装置。
     renderer.autoClear = false;
     const trailScene = new THREE.Scene();
-    const trailCamera = new THREE.PerspectiveCamera(-1, 1, 1, -1, 0, 1);  // OrthographicCamera に変更必要
+    const trailCamera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
     const trailMaterial = new THREE.MeshBasicMaterial({
       color: 0x000000,
       transparent: true,
