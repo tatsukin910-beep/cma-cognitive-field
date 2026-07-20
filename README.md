@@ -1,73 +1,44 @@
 # CMA Cognitive Field v5.1
 
-React + Three.js ビジュアライゼーションで構築された **Complex Multilayered Abuse (CMA)** の認知フィールド・デモプロジェクトです。
+**Complex Multilayered Abuse (CMA) フレームワークの現象学的可視化ツール**
 
-## 概要
+React + Three.js で実装された、CMAの5層構造を動的に表現するインタラクティブビジュアライゼーション。
 
-このプロジェクトは、复雑多層的辛役 (Complex Multilayered Abuse: CMA) 理論の5層構造をインタラクティブに可視化します。
-当事者研究者の中村達希 (tatsukin910-beep) が開発する CMA フレームワークの一環として作成されました。
+## 特徴
 
-### 5つの層 (LAYER_DEFINITIONS)
-
-- **Isolation** (隔離): 最外層、孤立的な状態
-- **Dependency** (依存): 依存関係
-- **Normalization** (正常化): 正常化・消化
-- **Institution** (制度): 制度・組織的困境
-- **Somatization** (身体化): 身体化、最深部の生命軸
-
-各層は円柱状の点群として表現され、各自獨自の波動アニメーションを持ちます。
-
-### 3つの観察者視点 (VIEW_MODES)
-
-- **OBSERVER A: EXTERNAL VIEW** — マクロでの客観主義的な視点 (LOW ambiguity)
-- **OBSERVER B: SUPPORT VIEW** — 支援の空白と制度にフォーカスするメソ視点 (MEDIUM)
-- **OBSERVER C: LIVED EXPERIENCE** — 当事者主観の現象学的世界 (MAX ambiguity, RAW_LIVED)
-
-ボタンで手動切り替え可能。操作を停止すると **Invisible Witness** モードで自動巡回します。
-
-### 視觚的特徴
-
-- Additive Blending とグローテクスチャによる柔らかい光の点群
-- Persistence of Vision (残像) トレイル効果で、点の動きを連続した流れとして知視
-- Epistemic Filter: モード毎に各層の opacity が変化し、構造的な可視性がフィルタリングされる
-- Observer C では中心軸が身体の揺らぎのように振動
+- **5層の認知フィールド**: Isolation → Dependency → Normalization → Institution → Somatization
+- **3つのObserver観点**:
+  - **A (External View)**: マクロに層を鳥瞰する客観主義的観点
+  - **B (Support View)**: 制度の框組と支援の空白にフォーカス
+  - **C (Lived Experience)**: 当事者主観の現象学的世界、体の脈動
+- **Invisible Witness 自動巡回モード**: 20秒無操作で自動で観点が切り替わる
+- **Epistemic Filter**: モードによって各層の可視性・不透明度が動的に変化
 
 ## 使い方
 
+1. 下部の3つのボタンで手動で観点を切り替える
+2. 20秒操作しないと自動巡回モードに復帰
+3. テレメトリ・ステータスで現在の状態を確認
+
+## テクノロジー
+
+- React 18 + Vite
+- Three.js (Points, custom glow texture, trail effect)
+- GitHub Pages 自動デプロイ
+
+## 開発
+
 ```bash
-git clone https://github.com/tatsukin910-beep/cma-cognitive-field.git
-cd cma-cognitive-field
 npm install
 npm run dev
 ```
 
-ブラウザで http://localhost:5173 を開くと、フルスクリーンのビジュアライゼーションが表示されます。
+## 公開URL
 
-ボタンで観点を切り替えられ、自動巡回モードは20秒無操作で復帰します。
-
-## CMA理論について
-
-このビジュアライゼーションは、中村達希 (tatsukin910-beep / X: @tatsu97910) が研究・開発する **Complex Multilayered Abuse (CMA)** フレームワークに基づいています。
-
-CMAは、辛役の多層的・構造的性質を当事者研究の観点から明らかにするための理論模式です。
-2026年に文化庁登録済み。
-
-詳細は X (@tatsu97910) や今後の学術論文発表をご覧ください。
-
-## 技術スタック
-
-- React 18 + Vite
-- Three.js (WebGL ポイントクラウド・アニメーション)
-- Canvas 生成グローテクスチャと残像トレイル効果
-
-## ライセンス
-
-このプロジェクトは研究・教育目的で公開されています。
-CMA理論を引用する場合は出典を明記してください。
+https://tatsukin910-beep.github.io/cma-cognitive-field/
 
 ---
 
-**Created by** 中村達希 (tatsukin910-beep)  
-X: [@tatsu97910](https://x.com/tatsu97910)  
+**Complex Multilayered Abuse (CMA) 理論の可視化・研索ツールとして開発中**
 
-*Structural Ambiguity & Epistemic Filter*
+当事者研索・学術発信用に作成。
